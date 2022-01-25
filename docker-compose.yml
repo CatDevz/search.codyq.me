@@ -1,0 +1,11 @@
+version: "3.7"
+
+services:
+  search-codyq-me:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    environment:
+      - HOST=${HOST}
+      - PORT=${PORT}
+    restart: unless-stopped
